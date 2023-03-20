@@ -27,14 +27,16 @@ public class TrackedImageInfoRuntimeManager : MonoBehaviour
         debugLog.text += "Creating Runtime Mutable Image Library\n";
 
         trackImageManager = gameObject.AddComponent<ARTrackedImageManager>();
+        debugLog.text += "CreateRuntimeLibrary begin\n";
         trackImageManager.referenceLibrary = trackImageManager.CreateRuntimeLibrary(xrReferenceImageLibrary);
+        debugLog.text += "CreateRuntimeLibrary end\n";
         trackImageManager.maxNumberOfMovingImages = 3;
         trackImageManager.trackedImagePrefab = prefabOnTrack;
 
         trackImageManager.enabled = true;
-
+        debugLog.text += "CreateRuntimeLibrary end 1\n";
         trackImageManager.trackedImagesChanged += OnTrackedImagesChanged;
-        
+        debugLog.text += "CreateRuntimeLibrary end 2\n";
         ShowTrackerInfo();
     }
 
