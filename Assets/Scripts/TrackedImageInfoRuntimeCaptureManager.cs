@@ -70,8 +70,8 @@ public class TrackedImageInfoRuntimeCaptureManager : MonoBehaviour
         debugLog.text += $"trackImageManager.trackables.count ({trackImageManager.trackables.count})\n";
         debugLog.text += $"trackImageManager.trackedImagePrefab.name ({trackImageManager.trackedImagePrefab.name})\n";
         debugLog.text += $"trackImageManager.maxNumberOfMovingImages ({trackImageManager.maxNumberOfMovingImages})\n";
-        debugLog.text += $"trackImageManager.supportsMutableLibrary ({trackImageManager.subsystem.SubsystemDescriptor.supportsMutableLibrary})\n";
-        debugLog.text += $"trackImageManager.requiresPhysicalImageDimensions ({trackImageManager.subsystem.SubsystemDescriptor.requiresPhysicalImageDimensions})\n";
+        debugLog.text += $"trackImageManager.supportsMutableLibrary ({trackImageManager.descriptor.supportsMutableLibrary})\n";
+        debugLog.text += $"trackImageManager.requiresPhysicalImageDimensions ({trackImageManager.descriptor.requiresPhysicalImageDimensions})\n";
     }
     void OnDisable()
     {
@@ -114,8 +114,8 @@ public class TrackedImageInfoRuntimeCaptureManager : MonoBehaviour
             debugLog.text += $"trackImageManager.trackables.count ({trackImageManager.trackables.count})\n";
             debugLog.text += $"trackImageManager.trackedImagePrefab.name ({trackImageManager.trackedImagePrefab.name})\n";
             debugLog.text += $"trackImageManager.maxNumberOfMovingImages ({trackImageManager.maxNumberOfMovingImages})\n";
-            debugLog.text += $"trackImageManager.supportsMutableLibrary ({trackImageManager.subsystem.SubsystemDescriptor.supportsMutableLibrary})\n";
-            debugLog.text += $"trackImageManager.requiresPhysicalImageDimensions ({trackImageManager.subsystem.SubsystemDescriptor.requiresPhysicalImageDimensions})\n";
+            debugLog.text += $"trackImageManager.supportsMutableLibrary ({trackImageManager.descriptor.supportsMutableLibrary})\n";
+            debugLog.text += $"trackImageManager.requiresPhysicalImageDimensions ({trackImageManager.descriptor.requiresPhysicalImageDimensions})\n";
         }
         catch(Exception e)
         {

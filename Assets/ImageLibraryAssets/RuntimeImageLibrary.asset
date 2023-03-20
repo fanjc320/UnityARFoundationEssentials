@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
   m_Name: RuntimeImageLibrary
   m_EditorClassIdentifier: 
-  m_GuidLow: 4771487299635088638
-  m_GuidHigh: 16366741093305614720
+  m_GuidLow: 5328762045007211572
+  m_GuidHigh: 10357393814976179340
+  m_DataStore:
+    m_Storage: []
   m_Images:
   - m_SerializedGuid:
       m_GuidLow: 5238647376842116937

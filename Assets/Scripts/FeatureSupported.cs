@@ -19,18 +19,19 @@ public class FeatureSupported : MonoBehaviour
     void Start()
     {
         // Face Support Checks
-        bool supportsEyeTracking = arFaceManager.subsystem.SubsystemDescriptor.supportsEyeTracking;
-        bool supportsFacePose = arFaceManager.subsystem.SubsystemDescriptor.supportsFacePose;
-        bool supportsFaceMeshVerticesAndIndices = arFaceManager.subsystem.SubsystemDescriptor.supportsFaceMeshVerticesAndIndices;
+        bool supportsEyeTracking = arFaceManager.descriptor.supportsEyeTracking;
+        bool supportsFacePose = arFaceManager.descriptor.supportsFacePose;
+        bool supportsFaceMeshVerticesAndIndices = arFaceManager.descriptor.supportsFaceMeshVerticesAndIndices;
 
         // Human Body Support Checks
-        bool supportsHumanBody2D = arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanBody2D;
-        bool supportsHumanBody3D = arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanBody3D;
-        bool supportsHumanDepthImage = arHumanBodyManager.subsystem.SubsystemDescriptor.supportsHumanDepthImage;
+        bool supportsHumanBody2D = arHumanBodyManager.descriptor.supportsHumanBody2D;
+        bool supportsHumanBody3D = arHumanBodyManager.descriptor.supportsHumanBody3D;
+        //bool supportsHumanDepthImage = arHumanBodyManager.descriptor.supportsHumanDepthImage;
+        bool supportsHumanDepthImage = arHumanBodyManager.descriptor.supportsHumanBody3DScaleEstimation;
 
         // Point Cloud Support Checks
-        bool supportsConfidence = arPointCloudManager.subsystem.SubsystemDescriptor.supportsConfidence;
-        bool supportsFeaturePoints = arPointCloudManager.subsystem.SubsystemDescriptor.supportsFeaturePoints;
+        bool supportsConfidence = arPointCloudManager.descriptor.supportsConfidence;
+        bool supportsFeaturePoints = arPointCloudManager.descriptor.supportsFeaturePoints;
         
         features.text = $"supportsEyeTracking : {supportsEyeTracking}\n" +
             $"supportsFacePose : {supportsFacePose}\n" +
